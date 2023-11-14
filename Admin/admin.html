@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Utilisateurs</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestion des Utilisateurs</h1>
+        </header>
+        <main>
+            <section id="user-section">
+                <form id="user-form">
+                    <div class="form-group">
+                        <input type="radio" name="action" value="addUser" id="add-user" required>
+                        <label for="add-user">Ajouter un utilisateur</label>
+                        <input type="radio" name="action" value="deleteUser" id="delete-user" required>
+                        <label for="delete-user">Supprimer un utilisateur</label>
+                    </div>
+                    <input type="hidden" id="user-id" name="CustomerId">
+                    <div class="form-group">
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Nom :</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate">Date de Naissance :</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="streetnumber">Numéro de Rue :</label>
+                        <input type="text" id="streetnumber" name="streetnumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="streetname">Nom de Rue :</label>
+                        <input type="text" id="streetname" name="streetname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="postalcode">Code Postal :</label>
+                        <input type="text" id="postalcode" name="postalcode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Ville :</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phonenumber">Numéro de Téléphone :</label>
+                        <input type="text" id="phonenumber" name="phonenumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Soumettre</button>
+                </form>
+                <div id="message"></div>
+            </section>
+            <section id="user-list">
+                <h2>Liste des Utilisateurs</h2>
+                <ul id="users"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

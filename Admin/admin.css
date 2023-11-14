@@ -1,0 +1,156 @@
+/* Importation de Bootstrap CSS (vous devez l'inclure dans votre projet) */
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+
+/* Styles personnalisés */
+body {
+    background-image: url('../images/background.jpg'); /* Remplacez 'background.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 600px; /* Réduite de moitié par rapport à la version précédente */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeIn 1s;
+}
+
+h1 {
+    color: #fc5d35;
+    font-size: 1.5em; /* Réduite de moitié par rapport à la version précédente */
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #fc5d35;
+    font-size: 1.2em; /* Réduite de moitié par rapport à la version précédente */
+    margin: 10px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Style pour les boutons */
+button {
+    background-color: #fc5d35;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff884d;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour les formulaires */
+form {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px; /* Réduite de moitié par rapport à la version précédente */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    animation: slideIn 1s;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9em;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Style pour le tableau */
+table {
+    margin: 10px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+th {
+    background-color: #fc5d35;
+    color: white;
+}
+
+/* Style pour les actions dans le tableau */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Style pour les boutons dans les actions */
+.actions button {
+    background-color: #fc5d35;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actions button:hover {
+    background-color: #ff884d;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation de glissement */
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
