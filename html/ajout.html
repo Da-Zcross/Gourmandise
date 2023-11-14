@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/ajout.css" rel="stylesheet">
+
+    <title>Gestion des Fruits</title>
+</head>
+
+<body>
+    <h1>Gestion des Fruits</h1>
+
+    <!-- Formulaire d'ajout de fruit -->
+    <h2>Ajouter un Fruit</h2>
+    <form id="add-form" enctype="multipart/form-data">
+        <input type="text" name="Denomination" placeholder="Dénomination" required><br>
+        <input type="text" name="Reference" placeholder="Référence" required><br>
+        <input type="number" step="0.01" name="Price" placeholder="Prix" required><br>
+        <input type="number" name="CategoryId" placeholder="ID de Catégorie" required><br>
+        <input type="file" name="images" id="fruit-image" accept="image/*" required><br>
+        <button type="submit">Ajouter</button>
+    </form>
+
+
+   <!-- Formulaire de modification de fruit -->
+<div id="edit-form-container" style="display: none;">
+    <h2>Modifier un Fruit</h2>
+    <form id="edit-form" enctype="multipart/form-data">
+        <input type="hidden" id="edit-product-id" name="ProductId">
+        <label for="edit-denomination">Dénomination :</label>
+        <input type="text" id="edit-denomination" name="Denomination" required><br>
+        <label for="edit-reference">Référence :</label>
+        <input type="text" id="edit-reference" name="Reference" required><br>
+        <label for="edit-price">Prix :</label>
+        <input type="number" step="0.01" id="edit-price" name="Price" required><br>
+        <label for="edit-category-id">ID de Catégorie :</label>
+        <input type="number" id="edit-category-id" name="CategoryId" required><br>
+        <input type="file" id="edit-file-id" name="images"><br>
+        <button type="submit">Mettre à Jour</button>
+    </form>
+</div>
+
+
+
+    <!-- Tableau pour afficher les fruits existants -->
+    <h2>Liste des Fruits</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Dénomination</th>
+                <th>Référence</th>
+                <th>Prix</th>
+                <th>Catégorie</th>
+                <th>Images</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="fruit-list">
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/ajout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta-données de base -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Métadonnées pour les appareils mobiles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Métadonnées du site -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Gourmandise</title>
+
+  <!-- Feuille de style du slider -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css">
+
+  <!-- Feuille de style de Bootstrap -->
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Styles des polices -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&amp;display=swap" rel="stylesheet">
+
+  <!-- Styles personnalisés pour ce modèle -->
+  <link href="../css/style.css" rel="stylesheet">
+  <!-- Style responsive -->
+  <link href="../css/responsive.css" rel="stylesheet">
+
+  <!-- Ajout de la bibliothèque Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Scripts JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <style>
+    /* Ajout d'espace entre les sections */
+    .section_space {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area sub_pages">
+    <!-- Section en-tête commence -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="../images/logo.png" alt=""><span>
+              Gourmandise
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="fruit.html"> Fruits</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contactes </a>
+                </li>
+                <li class="nav-item">
+                  <!-- Utilisation de l'icône panier de Font Awesome -->
+                  <form action="panier.html" method="post">
+                    <input type="hidden" name="panier">
+                    <button type="submit" class="nav-link btn-link">
+                      <i class="fas fa-shopping-cart"></i>
+                    </button>
+                  </form>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="../php/get_user_info.php">
+                <!-- Utilisation de l'icône utilisateur de Font Awesome -->
+                <i class="fas fa-user"></i>
+              </a>
+            </div>
+            <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
+              <a href="../login/login.html">
+                <!-- Utilisation de l'icône utilisateur de Font Awesome -->
+                <i class="fas fa-home"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+</body>
+
+</html>
+
+
+<!-- Formulaire de réclamation -->
+<section class="contact_section layout_padding">
+  <div class="container">
+    <h2 class="font-weight-bold">
+      Réclamations
+    </h2>
+    <div class="row">
+      <div class="col-md-8 mr-auto">
+        <form action="">
+          <div class="contact_form-container">
+            <div>
+              <div>
+                <input type="text" placeholder="Nom">
+              </div>
+              <div>
+                <input type="text" placeholder="Numéro de téléphone">
+              </div>
+              <div>
+                <input type="email" placeholder="E-mail">
+              </div>
+
+              <!-- Sélection du motif -->
+              <div>
+                <select id="select_motif" onchange="toggleSubButtons()">
+                  <option value="" disabled selected>Sélectionner le motif</option>
+                  <option value="livraison">Livraison</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <!-- Conteneur pour les sous-boutons (supprimé) -->
+              <div class="mt-5">
+                <input type="text" placeholder="Message">
+              </div>
+              <div class="mt-5">
+                <button type="submit">
+                  Envoyez
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section d'informations -->
+<section class="info_section layout_padding section_space">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Fruits</h5>
+        <ul>
+          <li>Nous vous faisons découvrir les bienfaits des fruits et leurs bien faits </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Services</h5>
+        <ul>
+          <li>
+            06 64 64 13 46 <br>
+            70 rue Anatole France <br>
+            92300 Levallois-Perret
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Liste</h5>
+        <ul>
+          <li>Nous vous donnons libre cours à votre imagination pour vous créer des produits à votre image selon vos
+            envies et vos fruits. Nous proposons également un service à domicile</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="social_container">
+          <h5>Nous suivre</h5>
+          <div class="social-box">
+            <a href=""><img src="../images/fb.png" alt=""></a>
+            <a href=""><img src="../images/twitter.png" alt=""></a>
+            <a href=""><img src="../images/linkedin.png" alt=""></a>
+            <a href=""><img src="../images/instagram.png" alt=""></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fin de la section d'informations -->
+
+<!-- Section du pied de page -->
+<section class="container-fluid footer_section section_space">
+  <p>Créé par &copy; Dassise DZELLAT KODIA
+    <a href="https://html.design/">IMIE-Paris </a>
+  </p>
+</section>
+<!-- Fin de la section du pied de page -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Informations Utilisateur</title>
+  
+
+  <!-- Scripts JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+  <h1>Informations Utilisateur</h1>
+
+  <div id="user-info">
+    <!-- Les informations de l'utilisateur seront affichées ici -->
+  </div>
+
+  <script>
+    // Fonction pour effectuer la requête AJAX vers le fichier PHP
+    function getUserInfo() {
+      // Créer un objet XMLHttpRequest
+      var xhr = new XMLHttpRequest();
+
+      // Définir la fonction de rappel pour traiter la réponse
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            // La requête s'est terminée avec succès
+            var response = JSON.parse(xhr.responseText);
+            if (response.success) {
+              // Les informations de l'utilisateur ont été récupérées avec succès
+              displayUserInfo(response.Customers);
+            } else {
+              // L'utilisateur n'est pas connecté ou non autorisé
+              displayErrorMessage("Vous n'êtes pas connecté ou non autorisé.");
+            }
+          } else {
+            // La requête a échoué
+            displayErrorMessage("Erreur lors de la récupération des informations de l'utilisateur.");
+          }
+        }
+      };
+
+      // Ouvrir une requête GET vers le fichier PHP
+      xhr.open("GET", "../php/get_user_info.php", true);
+
+      // Envoyer la requête
+      xhr.send();
+    }
+
+    // Fonction pour afficher les informations de l'utilisateur dans la page
+    function displayUserInfo(user) {
+      var userInfoDiv = document.getElementById("user-info");
+      userInfoDiv.innerHTML = "<p>Nom d'utilisateur : " + user.Username + "</p>" +
+                              "<p>Email : " + user.Email + "</p>" +
+                              "<p>Prénom : " + user.FirstName + "</p>" +
+                              "<p>Nom : " + user.LastName + "</p>";
+    }
+
+    // Fonction pour afficher un message d'erreur dans la page
+    function displayErrorMessage(message) {
+      var userInfoDiv = document.getElementById("user-info");
+      userInfoDiv.innerHTML = "<p style='color: red;'>" + message + "</p>";
+    }
+
+    // Appeler la fonction pour récupérer les informations de l'utilisateur au chargement de la page
+    getUserInfo();
+  </script>
+</body>
+</html>

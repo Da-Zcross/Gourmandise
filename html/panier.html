@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier - Gourmandise</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Lien vers Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Styles CSS personnalisés */
+    /* Ajoutez ici vos styles personnalisés */
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Panier</h2>
+    <hr>
+    <ul id="panier-liste" class="list-group">
+      <!-- Le contenu du panier sera affiché ici -->
+    </ul>
+    <div class="text-right mt-3">
+      <strong>Montant total du panier :</strong> <span id="montant-total">0</span>€
+    </div>
+    <div class="text-right mt-3">
+      <button id="vider-panier" class="btn btn-danger">Vider le panier</button>
+    </div>
+    <div class="text-center mt-5">
+      <h3>Choisissez votre moyen de paiement :</h3>
+      <div class="d-flex justify-content-center">
+        <!-- Ajoutez des boutons pour différents moyens de paiement ici -->
+        <button class="btn btn-primary paiement" data-moyenpaiement="PayPal"><i class="fab fa-paypal"></i> Payer avec PayPal</button>
+        <button class="btn btn-primary paiement" data-moyenpaiement="Visa"><i class="fab fa-cc-visa"></i> Payer avec Visa</button>
+        <button class="btn btn-primary paiement" data-moyenpaiement="Mastercard"><i class="fab fa-cc-mastercard"></i> Payer avec Mastercard</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts JavaScript -->
+  <script src="../js/panier.js"></script>
+</body>
+</html>
