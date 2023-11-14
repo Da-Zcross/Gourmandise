@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Inscription</title>
+
+  <!-- Feuilles de style -->
+
+  <link href="register.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="register-form">
+      <h1>Inscription</h1>
+      <form>
+        <div class="form-group">
+          <label for="firstname">Prénom</label>
+          <input type="text" id="firstname" name="firstname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Nom</label>
+          <input type="text" id="lastname" name="lastname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="birthdate">Date de Naissance</label>
+          <input type="date" id="birthdate" name="birthdate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="streetnumber">Numéro de Rue</label>
+          <input type="text" id="streetnumber" name="streetnumber" required>
+        </div>
+
+        <div class="form-group">
+          <label for="streetname">Nom de Rue</label>
+          <input type="text" id="streetname" name="streetname" required>
+        </div>
+
+        <div class="form-group">
+          <label for="postalcode">Code Postal</label>
+          <input type="text" id="postalcode" name="postalcode" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Ville</label>
+          <input type="text" id="city" name="city" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phonenumber">Numéro de Téléphone</label>
+          <input type="text" id="phonenumber" name="phonenumber" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group password-icon">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit">S'inscrire</button>
+      </form>
+      <p>Déjà inscrit ? <a href="../login/login.html">Se connecter</a></p>
+    </div>
+  </div>
+  <script src="register.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
